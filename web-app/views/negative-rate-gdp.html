@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>positive gdp growth rate</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+    
+        li {
+            float: left;
+        }
+    
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+    
+        .active {
+            color: black;
+            background-color: gray;
+        }
+    
+    
+    
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div>
+        <h2 style="font-size:40px; font-weight:bold;">Electricity access percentage and respective GDP per capita in 2020 for countries with negative GDP growth rate</h2>
+    </div>
+       
+        
+            
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/electricity-access">Electricity Access</a></li>
+            <li><a href="/electricity-generation">Electricity Generation</a></li>
+            <li><a href="/electricity-consumption">Electricity Consumption</a></li>
+            <li><a href="/co2-emission">CO2 Emission</a></li>
+            <li><a class="active" href="#">GDP</a></li>
+        </ul>
+    </div>
+    <br>
+    <div>
+        <nav>
+            <a href="/gdp">Have GDP</a> |
+            <a href="/gdp/no-gdp">Have no GDP</a> |
+            <a href="/gdp/positive-rate-gdp">Positive GDP growth rate</a> |
+            <a href="#">Negative GDP growth rate</a> |
+        </nav>
+    </div>
+    <br>
+    <div>
+        <table>
+\                            <tr>
+                    <th>Country</th>
+                    <th>Year</th>
+                    <th>Value of Electricity Access(% of population)</th>
+                    <th>GDP per capita</th>
+                    <th>GDP growth rate</th>
+                </tr>
+                {{#data}}
+                <tr>
+                    <td>{{country_name}}</td>
+                    <td>{{year_number}}</td>
+                    <td>{{access_percentage}}</td>
+                    <td>{{gdp_per_capita}}</td>
+                    <td>{{gdp_growth_rate}}</td>
+
+                </tr>
+                {{/data}}
+            </table>
+    </div>
+</body>
+</html>

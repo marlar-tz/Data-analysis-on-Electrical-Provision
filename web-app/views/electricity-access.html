@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>electricity access</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            color: black;
+            background-color: gray;
+        }
+
+
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div>
+        <h2 style="font-size:40px; font-weight:bold;">Total and average electricity access percentage for countries over
+            2000-2020</h2>
+    </div>
+
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a class="active" href="#">Electricity Access</a></li>
+            <li><a href="/electricity-generation">Electricity Generation</a></li>
+            <li><a href="/electricity-consumption">Electricity Consumption</a></li>
+            <li><a href="/co2-emission">CO2 Emission</a></li>
+            <li><a href="/gdp">GDP</a></li>
+        </ul>
+    </div>
+    <br>
+
+    <div>
+        <nav>
+            <a href="/electricity-access/full-access">Full Access</a> |
+            <a href="/electricity-access/notfull-access">Not Full Access</a> |
+            <a href="#">Average access percentage</a> |
+        </nav>
+    </div>
+    <br>
+    <div>
+        <table>
+            <tr>
+                <th>Country</th>
+                <th>Total value of Electricity Access over period(% of population)</th>
+                <th>Average value of Electricity Access over period(% of population)</th>
+            </tr>
+
+            {{#data}}
+            <tr>
+                <td>{{country_name}}</td>
+                <td>{{total_percentage}}</td>
+                <td>{{average_percentage}}</td>
+            </tr>
+
+            {{/data}}
+        </table>
+    </div>
+</body>
+
+</html>

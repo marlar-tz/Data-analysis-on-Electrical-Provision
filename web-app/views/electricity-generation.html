@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>electricity generation</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+    
+        li {
+            float: left;
+        }
+    
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+    
+        .active {
+            color: black;
+            background-color: gray;
+        }
+    
+    
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>      
+    <div>
+        <h3 style="font-size:45px; font-weight:bold;">Average electricity generation from each source for countries with full access over 2000-2020</h3>
+    </div>
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/electricity-access">Electricity Access</a></li>
+            <li><a class="active" href="#">Electricity Generation</a></li>
+            <li><a href="/electricity-consumption">Electricity Consumption</a></li>
+            <li><a href="/co2-emission">CO2 Emission</a></li>
+            <li><a href="/gdp">GDP</a></li>
+        </ul>
+    </div>
+    <br>
+        <div>
+            <nav>
+                <a href="#">for full electricity access</a> |
+                <a href="/electricity-generation/less-generate">for less electricity access</a> |
+                <a href="/electricity-generation/total-less-generate">Total generated amount</a> |
+            </nav>
+        </div>
+    <br>
+    <div>
+        <table>
+\                   <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Average value of Electricity Access over period(% of population)</th>
+            <th scope="col">Generating source</th>
+            <th scope="col">Average value of Electricity generate from source over period(TWh)</th>
+
+            </tr>
+        
+            {{#data}}
+            <tr>
+                <td>{{country_name}}</td>
+                <td>{{average_access_percentage}}</td>
+                <td>{{source_name}}</td>
+                <td>{{avergage_generate_amount}}</td>
+            </tr>
+            {{/data}}
+        </table>
+    </div>
+
+</body>
+
+
+
+</html>
