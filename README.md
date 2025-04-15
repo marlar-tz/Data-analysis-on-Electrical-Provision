@@ -1,6 +1,6 @@
 # Data Analysis on Electrical Provision
 
-This project is about analyzing data related to electrical provision. I obtained the dataset from the Kaggle website[link](https://www.kaggle.com/datasets/anshtanwar/global-data-on-sustainable-energy/data). In this project, we analyze and model the data to enable queries through a web application.
+This project is about analyzing data related to electrical provision.<br> I obtained the dataset from the Kaggle website [link](https://www.kaggle.com/datasets/anshtanwar/global-data-on-sustainable-energy/data).<br> In this project, we analyze and model the data to enable queries through a web application.<br>
  Within the web application, we answer various questions based on the dataset.<br>
  ![](/resources/questions%20for%20dataset.png)
  
