@@ -48,7 +48,6 @@ run
 - '!mysql -t < /electricity/scripts/create-tables.sql'
 -  '!mysql -t < /electricity/scripts/load-dnorm-data.sql'
 - !mysql -t < /electricity/scripts/ingest-data.sql
-<br>
 to create tables specified in the SQL script. <br>
 
 To run the web app , enter 'node app.js' in terminal.
